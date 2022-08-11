@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+  console.log("MOUNT auth");
   const history =
     defaultHistory || createMemoryHistory({ initialEntries: [initialPath] });
 
