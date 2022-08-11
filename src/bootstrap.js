@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+  console.log("AUTH MOUNT FUNCTION CALL!");
   const history =
     defaultHistory || createMemoryHistory({ initialEntries: [initialPath] });
 
@@ -14,7 +15,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   ReactDOM.render(<App history={history} />, el);
 
   return {
-    onParentNavigate: ({ pathname: nextPathname }) => {
+    onParentNavigate: ({ location: { pathname: nextPathname } }) => {
       const { pathname } = history.location;
 
       if (nextPathname !== pathname) {
@@ -22,6 +23,11 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
       }
     },
   };
+};
+
+const unmount = () => {
+  console.log("unmount");
+  ReactDOM.render(<div />);
 };
 
 if (process.env.NODE_ENV === "development") {
@@ -32,4 +38,4 @@ if (process.env.NODE_ENV === "development") {
   }
 }
 
-export { mount };
+export { mount, unmount };
