@@ -7,9 +7,8 @@ const commonConfig = require("./webpack.common");
 const devConfig = {
   mode: "development",
   output: {
-    filename: "[name].[contenthash].js",
     publicPath: "http://localhost:8081/",
-    asyncChunks: true
+    uniqueName: 'auth'
   },
   devServer: {
     port: 8081,
@@ -20,7 +19,8 @@ const devConfig = {
       name: "auth",
       filename: "remoteEntry.js",
       exposes: {
-        "./AuthApp": "./src/bootstrap",
+        "./AuthApp": "./src/index",
+        "./routes": "./src/config/routes",
       },
     }),
     new HtmlWebpackPlugin({ template: "./public/index.html" }),
