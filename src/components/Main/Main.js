@@ -1,13 +1,14 @@
-import React from 'react'
-import { useHistory } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
-    const history = useHistory();
-    return <div>THIS IS THE MAIN AUTH COMPONENT
-
-      <button onClick={() => history.push("/auth/sign-in")}>Sign in</button>
-
-      <button onClick={() => history.push("/auth/sign-up")}>Sign up</button>
+  const navigate = useNavigate();
+  return (
+    <div>
+      THIS IS THE MAIN AUTH COMPONENT
+      <button onClick={() => navigate("/auth/sign-in")}>Sign in</button>
+      <button onClick={() => navigate("/auth/sign-up")}>Sign up</button>
     </div>
-}
+  );
+};
 export default Main;

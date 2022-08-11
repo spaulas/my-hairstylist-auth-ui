@@ -7,7 +7,9 @@ const commonConfig = require("./webpack.common");
 const devConfig = {
   mode: "development",
   output: {
+    filename: "[name].[contenthash].js",
     publicPath: "http://localhost:8081/",
+    asyncChunks: true
   },
   devServer: {
     port: 8081,
