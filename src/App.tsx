@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp";
 import Main from "./components/Main/Main";
 
 export default ({ history }: { history: any }): React.ReactElement => {
+  console.log("APP auth");
   return (
     <HistoryRouter history={history}>
       <Routes>
