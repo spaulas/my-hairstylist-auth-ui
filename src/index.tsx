@@ -1,7 +1,7 @@
 import React from "react";
 import { createMemoryHistory, createBrowserHistory } from "history";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "@app/App";
 
 const mount = (
   el: ReactDOM.Container | null,

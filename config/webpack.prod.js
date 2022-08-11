@@ -14,7 +14,7 @@ const prodConfig = {
       filename: "remoteEntry.js",
       exposes: {
         "./AuthApp": "./src/index",
-        "./routes": './src/config/routes'
+        "./routes": './src/exposed/routes'
       },
     }),
   ],

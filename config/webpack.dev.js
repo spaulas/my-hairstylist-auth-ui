@@ -20,7 +20,7 @@ const devConfig = {
       filename: "remoteEntry.js",
       exposes: {
         "./AuthApp": "./src/index",
-        "./routes": "./src/config/routes",
+        "./routes": "./src/exposed/routes",
       },
     }),
     new HtmlWebpackPlugin({ template: "./public/index.html" }),

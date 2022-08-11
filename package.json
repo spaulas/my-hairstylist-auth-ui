@@ -6,6 +6,7 @@
     "build": "webpack --config config/webpack.prod.js"
   },
   "dependencies": {
+    "path": "^0.12.7",
     "process": "^0.11.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
