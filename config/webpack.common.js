@@ -21,6 +21,10 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
   resolve: {
@@ -28,8 +32,10 @@ module.exports = {
     alias: {
       "@app": resolve("src/app"),
       "@config": resolve("src/config"),
+      "@components": resolve("src/components"),
       "@constants": resolve("src/constants"),
       "@pages": resolve("src/pages"),
+      "@styles": resolve("src/styles"),
     },
   },
 };

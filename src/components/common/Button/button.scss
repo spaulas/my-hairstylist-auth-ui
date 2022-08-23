@@ -1,0 +1,23 @@
+@import "@styles/imports";
+
+button {
+  @include button;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &.primary {
+    background-color: $primary--blue;
+    color: white;
+    border: 1px solid $primary--blue;
+
+    &:hover {
+      background-color: $primary--blue-medium;
+      border: 1px solid $primary--blue-medium;
+      color: white;
+    }
+  }
+}

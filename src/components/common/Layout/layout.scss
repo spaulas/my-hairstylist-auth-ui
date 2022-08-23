@@ -1,0 +1,47 @@
+@import "@styles/imports";
+
+.layout {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &--strip {
+    position: absolute;
+    background-color: $primary--blue;
+    width: 480px;
+    top: 0;
+    bottom: 0;
+    right: calc(50% + 18px);
+  }
+
+  &--box {
+    @include shadow--gray-medium;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: $background--gray-light;
+    width: 1068px;
+    height: 680px;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 8px;
+
+    & > * {
+      width: 50%;
+    }
+
+    &-strip {
+      margin: 36px 18px 36px 36px;
+      background-color: $primary--blue;
+    }
+
+    &-children {
+      margin: 36px 36px 36px 18px;
+    }
+  }
+}

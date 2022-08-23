@@ -1,7 +1,13 @@
 import React from "react";
+import Layout from "@components/common/Layout";
+import SignUpForm from "@components/SignUp";
 
 const SignUp = () => {
-  return <div>SIGN UP PAGE</div>;
+  return (
+    <Layout>
+      <SignUpForm />
+    </Layout>
+  );
 };
 
 export default SignUp;

@@ -1,0 +1,78 @@
+@import "@styles/imports";
+
+.form {
+  &--item {
+    position: relative;
+    display: block;
+    margin-bottom: 36px;
+  }
+
+  &--label {
+    @include form--field-label;
+    position: absolute;
+    left: 26px;
+    top: 2px;
+    transition: all 0.4s ease;
+    color: $text--gray-dark;
+
+    &-focused {
+      top: -22px !important;
+      left: 26px;
+      background: linear-gradient(
+        180deg,
+        $background--gray-light 50%,
+        white 50%
+      );
+      padding: 0 5px;
+      font-size: 14px;
+      color: $primary--blue !important;
+    }
+  }
+
+  &--input {
+    transition: all 0.2s ease;
+    color: $text--gray-dark;
+    display: block;
+    width: 90%;
+    height: 44px;
+    padding: 5px 5%;
+    border: 1px solid #ccc;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
+    border-radius: 8px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #fff;
+    font-family: "HelveticaNeue", "Arial", sans-serif;
+    font-size: 105%;
+    letter-spacing: 0.8px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $primary--blue;
+      color: $primary--blue;
+    }
+  }
+}
+
+@-webkit-keyframes autofill {
+  0%,
+  100% {
+    color: #666;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
