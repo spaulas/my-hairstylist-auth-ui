@@ -2,12 +2,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@actions/*": ["src/redux/actions/*"],
       "@app/*": ["src/app/*"],
       "@config/*": ["src/config/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@pages/*": ["src/pages/*"],
+      "@reducers/*": ["src/redux/reducers/*"],
+      "@redux/*": ["src/redux/*"],
       "@styles/*": ["src/styles/*"],
+      "@type/*": ["src/type/*"],
     }
   }
 }

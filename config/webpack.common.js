@@ -30,12 +30,16 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".tsx", ".ts", ".html", ".scss"],
     alias: {
+      "@actions": resolve("src/redux/actions"),
       "@app": resolve("src/app"),
       "@config": resolve("src/config"),
       "@components": resolve("src/components"),
       "@constants": resolve("src/constants"),
       "@pages": resolve("src/pages"),
+      "@reducers": resolve("src/redux/reducers"),
+      "@redux": resolve("src/redux"),
       "@styles": resolve("src/styles"),
+      "@type": resolve("src/type"),
     },
   },
 };

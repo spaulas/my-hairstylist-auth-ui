@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./field.scss";
+import React from "react";
+import "./field.styles.scss";
 
 const FormField = ({
   label,
@@ -15,7 +15,7 @@ const FormField = ({
     <>
       <div className="form--item">
         <p
-          className={`form--label ${isLabelOnTop ? "form--label-focused" : ""}`}
+          className={`form--label ${isLabelOnTop ? "form--label__focused" : ""}`}
         >
           {label}
         </p>
@@ -23,7 +23,7 @@ const FormField = ({
           type={type}
           name={type}
           id={type}
-          className={`form--input ${isLabelOnTop ? "form--input-focused" : ""}`}
+          className={`form--input ${isLabelOnTop ? "form--input__focused" : ""}`}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           onChange={onChange}

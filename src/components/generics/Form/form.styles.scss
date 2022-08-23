@@ -3,9 +3,9 @@
 .title {
   margin: 104px 0 64px 0;
   text-align: center;
-  color: $text--gray-dark;
+  color: $text--gray__dark;
 
-  &-focused {
+  &__focused {
     color: $primary--blue;
   }
 }
@@ -20,7 +20,7 @@
     transition: all 0.2s ease;
 
     &:hover {
-      color: $primary--blue-medium;
+      color: $primary--blue__medium;
     }
   }
 }

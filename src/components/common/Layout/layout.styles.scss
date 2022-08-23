@@ -3,7 +3,7 @@
 .layout {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -17,11 +17,11 @@
   }
 
   &--box {
-    @include shadow--gray-medium;
+    @include shadow--gray__medium;
     position: absolute;
     display: flex;
     flex-direction: row;
-    background-color: $background--gray-light;
+    background-color: $background--gray__light;
     width: 1068px;
     height: 680px;
     right: 0;
@@ -30,6 +30,11 @@
     bottom: 0;
     margin: auto;
     border-radius: 8px;
+    transition: all 0.4s ease;
+
+    &__focused {
+      @include shadow--gray__dark;
+    }
 
     & > * {
       width: 50%;

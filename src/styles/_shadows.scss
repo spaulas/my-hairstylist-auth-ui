@@ -1,3 +1,6 @@
-@mixin shadow--gray-medium {
+@mixin shadow--gray__medium {
   box-shadow: 0px 0px 15px 5px #00000033;
+}
+@mixin shadow--gray__dark {
+  box-shadow: 0px 0px 20px 0px #00000066;
 }
