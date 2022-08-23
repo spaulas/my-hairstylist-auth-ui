@@ -1,0 +1,13 @@
+@import "@styles/imports";
+
+.link {
+  @include link;
+  cursor: pointer;
+  color: $primary--blue;
+  text-align: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $primary--blue__medium;
+  }
+}

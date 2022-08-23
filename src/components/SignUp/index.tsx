@@ -8,7 +8,12 @@ const SignUp = () => {
   const handleSignUp = () => {};
 
   return (
-    <Form handleSubmit={handleSignUp} buttonTitle="Sign Up">
+    <Form handleSubmit={handleSignUp} buttonTitle="Sign Up"
+    link={{
+      message: "Already have an account?",
+      title: "Sign in",
+      url: "/auth/sign-in",
+    }}>
       {(isFocused: any, setIsFocused: any) => (
         <>
           <NameField isFocused={isFocused} setIsFocused={setIsFocused} />
