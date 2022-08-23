@@ -7,9 +7,6 @@ import Routing from "@config/Routing";
 import { Props } from "./types";
 
 const App = ({ history }: Props): React.ReactElement => {
-  console.log("------------------");
-  console.log("store = ", store.getState());
-  console.log("persistor = ", persistor);
   return (
     <Provider store={store}>
         <HistoryRouter history={history}>

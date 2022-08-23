@@ -1,0 +1,17 @@
+@import "@styles/imports";
+
+.error {
+  @include form-error;
+  color: $primary--red__medium;
+  position: absolute;
+  opacity: 0;
+  top: 48px;
+  left: 24px;
+  margin: 4px 0 0;
+  transition: all 0.2s ease;
+
+  &__visible {
+    top: 56px;
+    opacity: 100%;
+  }
+}

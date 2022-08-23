@@ -7,7 +7,6 @@ const mount = (
   el: ReactDOM.Container | null,
   { onNavigate, defaultHistory, initialPath }: any
 ) => {
-  console.log("AUTH MOUNT FUNCTION CALL!");
   const history =
     defaultHistory || createMemoryHistory({ initialEntries: [initialPath] });
 

@@ -7,8 +7,6 @@ const INITIAL_LAYOUT: InitialLayout = {
 };
 
 const layoutReducer = (state = INITIAL_LAYOUT, action: ActionsCreators) => {
-  console.log('state = ', state)
-  console.log('action = ', action)
   switch (action.type) {
     case PagesActionTypes.SET_BACKGROUND_FOCUS:
       return { ...state, isBackgroundFocused: action.payload.isFocused };
