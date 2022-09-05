@@ -28,12 +28,12 @@
         white 50%
       );
       padding: 0 5px;
-      font-size: 14px;
       color: $primary--blue !important;
     }
   }
 
   &--input {
+    @include form--field-label;
     transition: all 0.2s ease;
     color: $text--gray__dark;
     display: block;
@@ -48,8 +48,7 @@
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     background-color: #fff;
-    font-family: "HelveticaNeue", "Arial", sans-serif;
-    font-size: 105%;
+    font-size: 102%;
     letter-spacing: 0.8px;
 
     &:focus {
@@ -81,7 +80,7 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-@media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+@media only screen and (max-width: $tablet-landscape__max) {
   .form {
     &--item {
       margin-bottom: 30px;
@@ -95,6 +94,25 @@ input:-webkit-autofill:active {
 
     &--input {
       height: 38px;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-desktop__max) {
+  .form {
+    &--item {
+      margin-bottom: 28px;
+    }
+
+    &--label {
+      &__focused {
+        left: 10px;
+        top: -18px !important;
+      }
+    }
+
+    &--input {
+      height: 32px;
     }
   }
 }

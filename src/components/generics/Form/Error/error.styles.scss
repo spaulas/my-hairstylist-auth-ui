@@ -16,12 +16,22 @@
   }
 }
 
-@media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+@media only screen and (max-width: $tablet-landscape__max) {
   .error {
     left: 20px;
 
     &__visible {
       top: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-desktop__max) {
+  .error {
+    left: 16px;
+
+    &__visible {
+      top: 44px;
     }
   }
 }

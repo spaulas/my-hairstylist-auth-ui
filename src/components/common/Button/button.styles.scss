@@ -21,3 +21,9 @@ button {
     }
   }
 }
+
+@media only screen and (max-width: $medium-desktop__max) {
+  button {
+    padding: 14px 0;
+  }
+}
