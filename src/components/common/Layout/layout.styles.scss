@@ -123,3 +123,34 @@
     }
   }
 }
+
+@media only screen and (max-width: $mobile__max) {
+  .layout {
+    max-width: 550px;
+    min-width: 360px;
+    min-height: 364px;
+
+    &--box {
+      width: calc(100% - 20px * 2);
+      height: 390px;
+
+      &-strip {
+        display: none;
+      }
+
+      &-children {
+        width: 100%;
+        margin: 20px;
+      }
+    }
+
+    &--strip {
+      width: 80%;
+      right: unset;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
