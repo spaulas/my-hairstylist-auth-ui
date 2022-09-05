@@ -98,21 +98,21 @@ input:-webkit-autofill:active {
   }
 }
 
-@media only screen and (max-width: $medium-desktop__max) {
+@media only screen and (max-width: $tablet-portrait__max) {
   .form {
     &--item {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     &--label {
       &__focused {
-        left: 10px;
-        top: -18px !important;
+        left: 8px;
+        top: -16px !important;
       }
     }
 
     &--input {
-      height: 32px;
+      height: 28px;
     }
   }
 }

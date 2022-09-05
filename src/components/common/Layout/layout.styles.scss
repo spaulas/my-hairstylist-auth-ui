@@ -99,3 +99,27 @@
     }
   }
 }
+
+@media only screen and (max-width: $tablet-portrait__max) {
+  .layout {
+    max-width: 826px;
+
+    &--box {
+      width: 612px;
+      height: 390px;
+
+      &-strip {
+        margin: 24px 12px 24px 24px;
+      }
+
+      &-children {
+        margin: 24px 24px 24px 12px;
+      }
+    }
+
+    &--strip {
+      width: 270px;
+      right: calc(50% + 12px);
+    }
+  }
+}

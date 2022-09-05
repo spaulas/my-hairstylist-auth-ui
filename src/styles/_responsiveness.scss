@@ -6,7 +6,8 @@ $tablet-landscape__min: 1280px;
 $medium-desktop__max: $tablet-landscape__min;
 $medium-desktop__min: 1024px;
 
-$medium-screen__max: $medium-desktop__min;
-$tablet-portrait__min: 600px;
+$tablet-portrait__max: $medium-desktop__min;
+$tablet-portrait__min: 826px;
 
 $mobile__max: $tablet-portrait__min;
+$mobile__min: 360px;

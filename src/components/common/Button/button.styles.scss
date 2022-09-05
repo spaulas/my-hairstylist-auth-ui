@@ -27,3 +27,11 @@ button {
     padding: 14px 0;
   }
 }
+
+@media only screen and (max-width: $tablet-portrait__max) {
+  button {
+    padding: 12px 0;
+  }
+
+
+}
