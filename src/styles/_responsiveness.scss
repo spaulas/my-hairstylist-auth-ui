@@ -1,0 +1,12 @@
+$big-desktop__min: 1440px;
+
+$tablet-landscape__max: $big-desktop__min;
+$tablet-landscape__min: 1280px;
+
+$medium-desktop__max: $tablet-landscape__min;
+$medium-desktop__min: 1024px;
+
+$medium-screen__max: $medium-desktop__min;
+$tablet-portrait__min: 600px;
+
+$mobile__max: $tablet-portrait__min;

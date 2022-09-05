@@ -15,3 +15,13 @@
     opacity: 100%;
   }
 }
+
+@media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+  .error {
+    left: 20px;
+
+    &__visible {
+      top: 50px;
+    }
+  }
+}

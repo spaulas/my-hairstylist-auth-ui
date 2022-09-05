@@ -50,3 +50,18 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+  .layout {
+    max-width: 1140px;
+
+    &--box {
+      width: 840px;
+      height: 534px;
+    }
+
+    &--strip {
+      width: 366px;
+    }
+  }
+}

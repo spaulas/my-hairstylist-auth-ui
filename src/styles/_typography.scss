@@ -1,3 +1,5 @@
+@import "@styles/_responsiveness";
+
 h1 {
   font-family: "Roboto";
   font-size: 32px;
@@ -5,6 +7,11 @@ h1 {
   line-height: 38px;
   letter-spacing: 0em;
   text-align: left;
+
+  @media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+    font-size: 28px;
+    line-height: 30px;
+  }
 }
 
 @mixin form--field-label {
@@ -14,6 +21,12 @@ h1 {
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
+
+
+  @media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 @mixin button {
@@ -23,6 +36,11 @@ h1 {
   line-height: 21px;
   letter-spacing: 0em;
   text-align: center;
+
+  @media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 @mixin link {
@@ -32,6 +50,11 @@ h1 {
   line-height: 16px;
   letter-spacing: 0em;
   text-decoration: none;
+
+  @media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+    font-size: 13px;
+    line-height: 14px;
+  }
 }
 
 @mixin form-error {
@@ -41,4 +64,9 @@ h1 {
   line-height: 14px;
   letter-spacing: 0em;
   text-align: left;
+
+  @media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+    font-size: 11px;
+    line-height: 13px;
+  }
 }

@@ -80,3 +80,21 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
+
+@media only screen and (min-width: $tablet-landscape__min) and (max-width: $tablet-landscape__max) {
+  .form {
+    &--item {
+      margin-bottom: 30px;
+    }
+
+    &--label {
+      &__focused {
+        left: 15px;
+      }
+    }
+
+    &--input {
+      height: 38px;
+    }
+  }
+}
