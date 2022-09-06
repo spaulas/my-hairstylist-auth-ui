@@ -22,16 +22,16 @@ button {
   }
 }
 
-@media only screen and (max-width: $medium-desktop__max) {
+@media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
   button {
     padding: 14px 0;
   }
 }
 
-@media only screen and (max-width: $tablet-portrait__max) {
+@media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
   button {
     padding: 12px 0;
   }
-
-
 }

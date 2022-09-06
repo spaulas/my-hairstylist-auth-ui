@@ -80,7 +80,7 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-@media only screen and (max-width: $tablet-landscape__max) {
+/* @media only screen and (max-width: $tablet-landscape__max-width) {
   .form {
     &--item {
       margin-bottom: 30px;
@@ -96,18 +96,49 @@ input:-webkit-autofill:active {
       height: 38px;
     }
   }
+} */
+
+@media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
+  .form {
+    &--label {
+      &__focused {
+        left: 15px;
+      }
+    }
+
+    &--input {
+      height: 38px;
+    }
+  }
 }
 
-@media only screen and (max-width: $tablet-portrait__max) {
+@media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
   .form {
     &--item {
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     &--label {
       &__focused {
-        left: 8px;
+        left: 12px;
         top: -16px !important;
+      }
+    }
+
+    &--input {
+      height: 28px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile__max-width)  and (max-height: $mobile__max-height){
+  .form {
+    &--label {
+      &__focused {
+        left: 22px;
+        top: -18px !important;
       }
     }
 

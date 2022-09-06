@@ -8,19 +8,16 @@ h1 {
   letter-spacing: 0em;
   text-align: left;
 
-  @media only screen and (max-width: $tablet-landscape__max) {
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
     font-size: 28px;
     line-height: 30px;
   }
 
-  @media only screen and (max-width: $medium-desktop__max) {
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
     font-size: 26px;
     line-height: 28px;
-  }
-
-  @media only screen and (max-width: $tablet-portrait__max) {
-    font-size: 24px;
-    line-height: 26px;
   }
 }
 
@@ -32,19 +29,16 @@ h1 {
   letter-spacing: 0em;
   text-align: left;
 
-  @media only screen and (max-width: $tablet-landscape__max) {
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
     font-size: 14px;
     line-height: 18px;
   }
 
-  @media only screen and (max-width: $medium-desktop__max) {
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
     font-size: 12px;
     line-height: 14px;
-  }
-
-  @media only screen and (max-width: $tablet-portrait__max) {
-    font-size: 11px;
-    line-height: 13px;
   }
 }
 
@@ -56,19 +50,16 @@ h1 {
   letter-spacing: 0em;
   text-align: center;
 
-  @media only screen and (max-width: $tablet-landscape__max) {
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
     font-size: 16px;
     line-height: 18px;
   }
 
-  @media only screen and (max-width: $medium-desktop__max) {
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
     font-size: 14px;
     line-height: 16px;
-  }
-
-  @media only screen and (max-width: $tablet-portrait__max) {
-    font-size: 12px;
-    line-height: 14px;
   }
 }
 
@@ -80,19 +71,16 @@ h1 {
   letter-spacing: 0em;
   text-decoration: none;
 
-  @media only screen and (max-width: $tablet-landscape__max) {
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
     font-size: 13px;
     line-height: 14px;
   }
 
-  @media only screen and (max-width: $medium-desktop__max) {
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
     font-size: 12px;
     line-height: 13px;
-  }
-
-  @media only screen and (max-width: $tablet-portrait__max) {
-    font-size: 11px;
-    line-height: 12px;
   }
 }
 
@@ -104,18 +92,15 @@ h1 {
   letter-spacing: 0em;
   text-align: left;
 
-  @media only screen and (max-width: $tablet-landscape__max) {
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
     font-size: 11px;
     line-height: 13px;
   }
 
-  @media only screen and (max-width: $medium-desktop__max) {
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
     font-size: 10px;
     line-height: 12px;
-  }
-
-  @media only screen and (max-width: $tablet-portrait__max) {
-    font-size: 8px;
-    line-height: 10px;
   }
 }
