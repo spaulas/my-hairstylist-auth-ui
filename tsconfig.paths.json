@@ -3,10 +3,12 @@
     "baseUrl": ".",
     "paths": {
       "@actions/*": ["src/redux/actions/*"],
+      "@api/*": ["src/api/*"],
       "@app/*": ["src/app/*"],
       "@config/*": ["src/config/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@pages/*": ["src/pages/*"],
       "@reducers/*": ["src/redux/reducers/*"],
       "@redux/*": ["src/redux/*"],

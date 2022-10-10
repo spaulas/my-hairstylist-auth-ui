@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import FormField from "..";
 
-const NameField = ({ isFocused, setIsFocused }: any) => {
-  const [name, setName] = useState("");
+const NameField = ({ name, setName, isFocused, setIsFocused }: any) => {
   const handleNameChange = ({ target: { value } }: any) => setName(value);
 
   return (

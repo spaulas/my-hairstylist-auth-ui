@@ -9,9 +9,11 @@ import { Props } from "./types";
 const App = ({ history }: Props): React.ReactElement => {
   return (
     <Provider store={store}>
+      <PersistGate persistor={persistor}>
         <HistoryRouter history={history}>
           <Routing />
         </HistoryRouter>
+      </PersistGate>
     </Provider>
   );
 };

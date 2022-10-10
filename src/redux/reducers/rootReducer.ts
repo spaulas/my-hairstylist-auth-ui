@@ -1,10 +1,12 @@
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
-import layoutReducer from "./reducers/layout/layout.reducer";
+import layoutReducer from "./layout/layout.reducer";
+import authReducer from "./auth/auth.reducer";
 
 export const rootReducer = {
   Layout: layoutReducer,
+  Auth: authReducer,
 };
 
 const persistConfig = {

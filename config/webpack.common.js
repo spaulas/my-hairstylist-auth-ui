@@ -25,16 +25,24 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
     ],
   },
   resolve: {
     extensions: [".js", ".jsx", ".tsx", ".ts", ".html", ".scss"],
     alias: {
       "@actions": resolve("src/redux/actions"),
+      "@api": resolve("src/api"),
       "@app": resolve("src/app"),
       "@config": resolve("src/config"),
       "@components": resolve("src/components"),
       "@constants": resolve("src/constants"),
+      "@hooks": resolve("src/hooks"),
       "@pages": resolve("src/pages"),
       "@reducers": resolve("src/redux/reducers"),
       "@redux": resolve("src/redux"),

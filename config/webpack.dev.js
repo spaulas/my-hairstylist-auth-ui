@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const commonConfig = require("./webpack.common");
 
 const devConfig = {
@@ -27,6 +28,7 @@ const devConfig = {
     new webpack.ProvidePlugin({
       process: "process/browser",
     }),
+    new NodePolyfillPlugin()
   ],
 };
 

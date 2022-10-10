@@ -2,8 +2,12 @@ import React, { useState, useMemo } from "react";
 import FormField from "..";
 import debounce from "lodash.debounce";
 
-const PasswordField = ({ isFocused, setIsFocused }: any) => {
-  const [password, setPassword] = useState("");
+const PasswordField = ({
+  password,
+  setPassword,
+  isFocused,
+  setIsFocused,
+}: any) => {
   const [error, setError] = useState<string>("");
 
   const errorMessages: Record<string, string> = {

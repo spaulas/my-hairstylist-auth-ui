@@ -2,8 +2,7 @@ import React, { useState, useMemo } from "react";
 import FormField from "..";
 import debounce from "lodash.debounce";
 
-const EmailField = ({ isFocused, setIsFocused }: any) => {
-  const [email, setEmail] = useState("");
+const EmailField = ({ email, setEmail, isFocused, setIsFocused }: any) => {
   const [hasError, setHasError] = useState(false);
 
   const handleEmailChange = ({ target: { value } }: any) => {
