@@ -7,3 +7,9 @@ type RootReducer = typeof import("./redux/reducers").rootReducer;
 export type RootReducerState = {
   [P in keyof RootReducer]: ReturnType<RootReducer[P]>;
 };
+
+export type InputElement = {
+  target: {
+    value: string;
+  };
+};

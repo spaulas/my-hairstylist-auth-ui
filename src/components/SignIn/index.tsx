@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Form from "@components/generics/Form";
 import EmailField from "@components/generics/Form/Field/Email";
 import PasswordField from "@components/generics/Form/Field/Password";
@@ -22,13 +22,15 @@ const SignIn = () => {
         url: "/auth/sign-up",
       }}
     >
-      {(isFocused: any, setIsFocused: any) => (
+      {(isFocused: Record<string, boolean>, setIsFocused: any) => (
         <>
           <EmailField
             email={fields.email}
             setEmail={(value: string) => setFields({ ...fields, email: value })}
-            isFocused={isFocused}
-            setIsFocused={setIsFocused}
+            isFocused={isFocused.email}
+            setIsFocused={(value: any) =>
+              setIsFocused({ ...isFocused, email: value })
+            }
           />
           <PasswordField
             password={fields.password}
@@ -36,7 +38,9 @@ const SignIn = () => {
               setFields({ ...fields, password: value })
             }
             isFocused={isFocused}
-            setIsFocused={setIsFocused}
+            setIsFocused={(value: any) =>
+              setIsFocused({ ...isFocused, password: value })
+            }
           />
         </>
       )}

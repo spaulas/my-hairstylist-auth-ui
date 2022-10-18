@@ -43,6 +43,7 @@ module.exports = {
       "@components": resolve("src/components"),
       "@constants": resolve("src/constants"),
       "@hooks": resolve("src/hooks"),
+      "@mocks": resolve("src/__mocks__"),
       "@pages": resolve("src/pages"),
       "@reducers": resolve("src/redux/reducers"),
       "@redux": resolve("src/redux"),

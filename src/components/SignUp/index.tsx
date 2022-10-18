@@ -29,13 +29,17 @@ const SignUp = () => {
             name={fields.name}
             setName={(value: string) => setFields({ ...fields, name: value })}
             isFocused={isFocused}
-            setIsFocused={setIsFocused}
+            setIsFocused={(value: any) =>
+              setIsFocused({ ...isFocused, name: value })
+            }
           />
           <EmailField
             email={fields.email}
             setEmail={(value: string) => setFields({ ...fields, email: value })}
             isFocused={isFocused}
-            setIsFocused={setIsFocused}
+            setIsFocused={(value: any) =>
+              setIsFocused({ ...isFocused, email: value })
+            }
           />
           <PasswordField
             password={fields.password}
@@ -43,7 +47,9 @@ const SignUp = () => {
               setFields({ ...fields, password: value })
             }
             isFocused={isFocused}
-            setIsFocused={setIsFocused}
+            setIsFocused={(value: any) =>
+              setIsFocused({ ...isFocused, password: value })
+            }
           />
         </>
       )}

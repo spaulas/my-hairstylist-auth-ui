@@ -9,6 +9,7 @@
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@mocks/*": ["src/__mocks__/*"],
       "@pages/*": ["src/pages/*"],
       "@reducers/*": ["src/redux/reducers/*"],
       "@redux/*": ["src/redux/*"],

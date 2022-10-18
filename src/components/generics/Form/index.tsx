@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./form.styles.scss";
 import Button from "@components/common/Button";
 import Link from "@components/common/Link";
-import useLayout from "@components/common/Layout/useLayout.hooks";
+import useLayout from "@components/common/Layout/useLayout/index.hooks";
 
 const Form = ({
   children,

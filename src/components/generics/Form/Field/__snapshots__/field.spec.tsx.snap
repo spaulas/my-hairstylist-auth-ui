@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField renders correctly 1`] = `
+<div>
+  <div
+    class="form--item"
+  >
+    <p
+      class="form--label "
+    >
+      Label
+    </p>
+    <input
+      class="form--input "
+      data-testid="name"
+      id="name"
+      name="name"
+      type="name"
+      value=""
+    />
+    <p
+      class="error "
+    >
+      Error message
+    </p>
+  </div>
+</div>
+`;

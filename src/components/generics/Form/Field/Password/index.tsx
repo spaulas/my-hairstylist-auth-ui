@@ -1,13 +1,15 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import FormField from "..";
 import debounce from "lodash.debounce";
+import validatePasswordHelper from "./validatePassword";
+import { PasswordProps } from "./password.types";
 
 const PasswordField = ({
   password,
   setPassword,
   isFocused,
   setIsFocused,
-}: any) => {
+}: PasswordProps): React.ReactElement => {
   const [error, setError] = useState<string>("");
 
   const errorMessages: Record<string, string> = {
@@ -25,7 +27,7 @@ const PasswordField = ({
       "Password should have at least one uppercase and one lowercase letter, one number, and one special character",
   };
 
-  const handlePasswordChange = ({ target: { value } }: any) => {
+  const handlePasswordChange = (value: string) => {
     setPassword(value);
     debouncedPasswordValidation(value);
   };
@@ -36,40 +38,9 @@ const PasswordField = ({
   );
 
   function validatePassword(password: string) {
-    let errorCause = "";
-
-    if (password.length < 8 || password.length > 128) {
-      errorCause = "length";
-    } else {
-      if (!hasAtLeastUpperCaseAndLowerCase(password)) {
-        errorCause = "case-";
-      }
-
-      if (!hasAtLeastOneNumber(password)) {
-        errorCause = `${errorCause}number-`;
-      }
-
-      if (!hasAtLeastOneSpecialCharacter(password)) {
-        errorCause = `${errorCause}special-`;
-      }
-
-      errorCause = errorCause.substring(0, errorCause.length - 1);
-    }
-
+    const errorCause = validatePasswordHelper(password);
     setError(errorCause);
   }
-
-  const hasAtLeastUpperCaseAndLowerCase = (password: string) => {
-    return /(.*[a-z,A-Z])/.test(password);
-  };
-
-  const hasAtLeastOneNumber = (password: string) => {
-    return /(?=.*\d)/.test(password);
-  };
-
-  const hasAtLeastOneSpecialCharacter = (password: string) => {
-    return /(?=.*[@$!%*?&#:/<>^=+])/.test(password);
-  };
 
   return (
     <FormField
@@ -77,12 +48,10 @@ const PasswordField = ({
       type="password"
       value={password}
       errorMessage={errorMessages[error]}
-      hasError={error}
+      hasError={!!error}
       onChange={handlePasswordChange}
-      isFocused={isFocused["password"]}
-      setIsFocused={(value: any) =>
-        setIsFocused({ ...isFocused, password: value })
-      }
+      isFocused={isFocused}
+      setIsFocused={setIsFocused}
     />
   );
 };

@@ -1,6 +1,5 @@
-import React from "react";
 import "./layout.styles.scss";
-import useLayout from "./useLayout.hooks";
+import useLayout from "./useLayout/index.hooks";
 
 const Layout = ({ children }: any) => {
   const { isBackgroundFocused } = useLayout();
@@ -9,6 +8,7 @@ const Layout = ({ children }: any) => {
     <div className="layout">
       <div className="layout--strip" />
       <section
+      data-testid="layoutBox"
         className={`layout--box ${
           isBackgroundFocused ? "layout--box__focused" : ""
         }`}

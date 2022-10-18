@@ -1,11 +1,19 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import FormField from "..";
 import debounce from "lodash.debounce";
+import validateEmailHelper from "./validateEmail";
+import { EmailFieldProps } from "./email.types";
+import { InputElement } from "@type/global";
 
-const EmailField = ({ email, setEmail, isFocused, setIsFocused }: any) => {
-  const [hasError, setHasError] = useState(false);
+const EmailField = ({
+  email,
+  setEmail,
+  isFocused,
+  setIsFocused,
+}: EmailFieldProps): React.ReactElement => {
+  const [hasError, setHasError] = useState<boolean>(false);
 
-  const handleEmailChange = ({ target: { value } }: any) => {
+  const handleEmailChange = (value: string) => {
     setEmail(value);
     debouncedEmailValidation(value);
   };
@@ -16,7 +24,7 @@ const EmailField = ({ email, setEmail, isFocused, setIsFocused }: any) => {
   );
 
   function validateEmail(email: string) {
-    const isValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    const isValid = validateEmailHelper(email);
     setHasError(!isValid);
   }
 
@@ -28,10 +36,8 @@ const EmailField = ({ email, setEmail, isFocused, setIsFocused }: any) => {
       type="email"
       value={email}
       onChange={handleEmailChange}
-      isFocused={isFocused["email"]}
-      setIsFocused={(value: any) =>
-        setIsFocused({ ...isFocused, email: value })
-      }
+      isFocused={isFocused}
+      setIsFocused={setIsFocused}
     />
   );
 };

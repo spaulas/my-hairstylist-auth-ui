@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import SignIn from "@pages/SignIn";
 import SignUp from "@pages/SignUp";
 import Main from "@pages/Main/Main";
-import useLayout from "@components/common/Layout/useLayout.hooks";
+import useLayout from "@components/common/Layout/useLayout/index.hooks";
 import "@app/app.styles.scss";
 
 

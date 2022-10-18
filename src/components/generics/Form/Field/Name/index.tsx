@@ -1,8 +1,13 @@
-import React from "react";
 import FormField from "..";
+import { NameProps } from "./name.types";
 
-const NameField = ({ name, setName, isFocused, setIsFocused }: any) => {
-  const handleNameChange = ({ target: { value } }: any) => setName(value);
+const NameField = ({
+  name,
+  setName,
+  isFocused,
+  setIsFocused,
+}: NameProps): React.ReactElement => {
+  const handleNameChange = (value: string) => setName(value);
 
   return (
     <FormField
@@ -10,8 +15,8 @@ const NameField = ({ name, setName, isFocused, setIsFocused }: any) => {
       type="name"
       value={name}
       onChange={handleNameChange}
-      isFocused={isFocused["name"]}
-      setIsFocused={(value: any) => setIsFocused({ ...isFocused, name: value })}
+      isFocused={isFocused}
+      setIsFocused={setIsFocused}
     />
   );
 };
