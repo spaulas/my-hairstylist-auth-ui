@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom/extend-expect";
-import { useLayoutMock } from "./useLayout/useLayout.mocks";
+import { mockUseLayout } from "./useLayout/useLayout.mocks";
 import Layout from ".";
 import { render, screen } from "@testing-library/react";
 
@@ -19,7 +19,7 @@ describe("Layout", () => {
     );
 
   beforeEach(() => {
-    useLayoutMock.mockReturnValue(hookValues);
+    mockUseLayout.mockReturnValue(hookValues);
   });
 
   it("renders correctly", () => {
@@ -37,7 +37,7 @@ describe("Layout", () => {
 
     it("not have layout--box__focused if !isBackgroundFocused", () => {
       const backgroundUnfocused = { ...hookValues, isBackgroundFocused: false };
-      useLayoutMock.mockReturnValue(backgroundUnfocused);
+      mockUseLayout.mockReturnValue(backgroundUnfocused);
 
       renderLayout();
       expect(screen.getByTestId("layoutBox")).not.toHaveClass(

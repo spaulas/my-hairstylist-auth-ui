@@ -3,7 +3,7 @@ import Form from "@components/generics/Form";
 import EmailField from "@components/generics/Form/Field/Email";
 import PasswordField from "@components/generics/Form/Field/Password";
 import NameField from "@components/generics/Form/Field/Name";
-import useAuth from "@hooks/useAuth";
+import useAuth from "@hooks/useAuth/index.hooks";
 
 const SignUp = () => {
   const { signUp } = useAuth();
@@ -16,7 +16,7 @@ const SignUp = () => {
   return (
     <Form
       handleSubmit={handleSignUp}
-      buttonTitle="Sign Up"
+      buttonTitle="Sign up"
       link={{
         message: "Already have an account?",
         title: "Sign in",

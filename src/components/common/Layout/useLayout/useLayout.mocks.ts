@@ -1,3 +1,3 @@
-export const useLayoutMock = jest.fn();
+export const mockUseLayout = jest.fn();
 
-jest.mock("./index.hooks.ts", () => useLayoutMock);
+jest.mock("./index.hooks.ts", () => mockUseLayout);

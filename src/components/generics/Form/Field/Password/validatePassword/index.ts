@@ -23,7 +23,7 @@ const validatePassword = (password: string): string => {
 };
 
 const hasAtLeastUpperCaseAndLowerCase = (password: string) => {
-  return /(.*[a-z,A-Z])/.test(password);
+  return /(?=.*[a-z])(?=.*[A-Z])/.test(password);
 };
 
 const hasAtLeastOneNumber = (password: string) => {

@@ -2,11 +2,15 @@ import { useState } from "react";
 import Form from "@components/generics/Form";
 import EmailField from "@components/generics/Form/Field/Email";
 import PasswordField from "@components/generics/Form/Field/Password";
-import useAuth from "@hooks/useAuth";
+import useAuth from "@hooks/useAuth/index.hooks";
 
 const SignIn = () => {
   const { signIn } = useAuth();
-  const [fields, setFields] = useState({ password: "", email: "" });
+  const [fields, setFields] = useState<Record<string, string>>({
+    password: "",
+    email: "",
+  });
+  
   const handleSignIn = () => {
     signIn(fields);
   };
@@ -37,7 +41,7 @@ const SignIn = () => {
             setPassword={(value: string) =>
               setFields({ ...fields, password: value })
             }
-            isFocused={isFocused}
+            isFocused={isFocused.password}
             setIsFocused={(value: any) =>
               setIsFocused({ ...isFocused, password: value })
             }

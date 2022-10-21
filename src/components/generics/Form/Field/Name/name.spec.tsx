@@ -1,8 +1,6 @@
 import "@testing-library/jest-dom/extend-expect";
-import { mockUseState } from "../../../../../__mocks__/mock-react";
 import NameField from ".";
-import { act, fireEvent, render, screen } from "@testing-library/react";
-import pause from "../../../../../utils/pause";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 describe("NameField", () => {
   const props = {

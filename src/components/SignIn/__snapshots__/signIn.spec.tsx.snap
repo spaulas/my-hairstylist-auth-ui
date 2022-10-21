@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn renders correctly 1`] = `
+<div>
+  <div
+    class="form"
+  >
+    <h1
+      class="form--title "
+    >
+      My Hairstylist
+    </h1>
+    <div
+      class="form--item"
+    >
+      <p
+        class="form--label "
+      >
+        Email
+      </p>
+      <input
+        class="form--input "
+        data-testid="email"
+        id="email"
+        name="email"
+        type="email"
+        value=""
+      />
+      <p
+        class="error error__visible"
+      >
+        Please add a valid email
+      </p>
+    </div>
+    <div
+      class="form--item"
+    >
+      <p
+        class="form--label "
+      >
+        Password
+      </p>
+      <input
+        class="form--input "
+        data-testid="password"
+        id="password"
+        name="password"
+        type="password"
+        value=""
+      />
+      <p
+        class="error error__visible"
+      />
+    </div>
+    <button
+      class="primary"
+    >
+      Login
+    </button>
+    <a
+      class="link form--links-forgot-password"
+      href=""
+    >
+      Forgot your password?
+    </a>
+    <p
+      class="form--links-sign-up"
+    >
+      Don't have an account?
+        
+      <a
+        class="link "
+        href="/auth/sign-up"
+      >
+        Sign up
+      </a>
+    </p>
+  </div>
+</div>
+`;

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import "./form.styles.scss";
+import { useEffect, useState } from "react";
 import Button from "@components/common/Button";
 import Link from "@components/common/Link";
 import useLayout from "@components/common/Layout/useLayout/index.hooks";
+import { FormProps } from "./form.types";
+import "./form.styles.scss";
 
 const Form = ({
   children,
@@ -10,12 +11,12 @@ const Form = ({
   buttonTitle,
   showForgotPassword,
   link: { message, title, url },
-}: any) => {
+}: FormProps) => {
   const { isBackgroundFocused, setBackgroundFocus } = useLayout();
 
   const [isFocused, setIsFocused] = useState({});
 
-  const isAnyFocused: any = Object.values(isFocused).find((e) => e);
+  const isAnyFocused: any = Object.values(isFocused).find((e) => e) || false;
 
   useEffect(() => {
     if (isAnyFocused !== isBackgroundFocused) {

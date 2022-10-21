@@ -3,7 +3,6 @@ import FormField from "..";
 import debounce from "lodash.debounce";
 import validateEmailHelper from "./validateEmail";
 import { EmailFieldProps } from "./email.types";
-import { InputElement } from "@type/global";
 
 const EmailField = ({
   email,

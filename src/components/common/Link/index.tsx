@@ -2,7 +2,7 @@ import "./link.styles.scss";
 import { LinkProps } from "./link.types";
 
 const Link = ({
-  url,
+  url = "",
   title,
   className = "",
 }: LinkProps): React.ReactElement => {

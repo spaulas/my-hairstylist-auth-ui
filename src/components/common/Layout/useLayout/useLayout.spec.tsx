@@ -1,7 +1,7 @@
 import {
   mockDispatch,
   mockSelector,
-} from "../../../../__mocks__/mock-react-redux";
+} from "@mocks/mock-react-redux";
 import useLayout from "./index.hooks";
 import layoutActions from "@actions/layout/layout.action";
 
