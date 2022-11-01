@@ -13,3 +13,13 @@ export type InputElement = {
     value: string;
   };
 };
+
+export type Error = {
+  response?: {
+    data?: {
+      error?: string;
+      code?: number;
+    };
+    status?: number;
+  };
+};

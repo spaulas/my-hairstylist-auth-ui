@@ -1,7 +1,7 @@
 import { all, put, takeLatest, call } from "redux-saga/effects";
 import AuthActionTypes from "@actions/auth/actionTypes";
 import actions from "@actions/auth/auth.action";
-import { signUpApiRequest, signInApiRequest } from "@api/auth/request";
+import { signUpApiRequest, signInApiRequest } from "@api/auth";
 
 export function* signUpAsync({ payload }: any): any {
   try {

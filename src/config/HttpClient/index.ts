@@ -1,4 +1,4 @@
-import axios from "axios";
+const axios = require("axios");
 
 // TODO create EnvironmentConfig
 const axiosInstance = axios.create({
@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
 const baseURL = "http://localhost:3090";
 
 export default () => {
-  axiosInstance.interceptors.request.use((config) => ({ ...config, baseURL }));
+  axiosInstance.interceptors.request.use((config: any) => ({ ...config, baseURL }));
 
   return axiosInstance;
 };
