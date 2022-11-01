@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailField renders correctly 1`] = `
+<div>
+  <div
+    class="form--item"
+  >
+    <p
+      class="form--label "
+    >
+      Email
+    </p>
+    <input
+      class="form--input "
+      data-testid="email"
+      id="email"
+      name="email"
+      type="email"
+      value=""
+    />
+    <p
+      class="error "
+    >
+      Please add a valid email
+    </p>
+  </div>
+</div>
+`;

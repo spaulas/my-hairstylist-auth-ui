@@ -1,0 +1,106 @@
+@import "@styles/_responsiveness";
+
+h1 {
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
+    font-size: 26px;
+    line-height: 28px;
+  }
+}
+
+@mixin form--field-label {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@mixin button {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@mixin link {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-decoration: none;
+
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
+    font-size: 13px;
+    line-height: 14px;
+  }
+
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
+
+@mixin form-error {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  @media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  @media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

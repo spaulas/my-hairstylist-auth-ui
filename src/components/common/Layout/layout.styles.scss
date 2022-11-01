@@ -1,0 +1,135 @@
+@import "@styles/imports";
+
+.layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &--strip {
+    position: absolute;
+    background-color: $primary--blue;
+    width: 480px;
+    top: 0;
+    bottom: 0;
+    right: calc(50% + 18px);
+    transition: all 0.4s ease;
+  }
+
+  &--box {
+    @include shadow--gray__medium;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: $background--gray__light;
+    width: 1068px;
+    height: 680px;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+
+    &__focused {
+      @include shadow--gray__dark;
+    }
+
+    & > * {
+      width: 50%;
+    }
+
+    &-strip {
+      margin: 36px 18px 36px 36px;
+      background-color: $primary--blue;
+    }
+
+    &-children {
+      margin: 36px 36px 36px 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
+  .layout {
+    max-width: 940px;
+
+    &--box {
+      width: 880px;
+      height: 560px;
+
+      &-strip {
+        margin: 28px 14px 28px 28px;
+      }
+
+      &-children {
+        margin: 28px 28px 28px 14px;
+      }
+    }
+
+    &--strip {
+      width: 398px;
+      right: calc(50% + 14px);
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
+  .layout {
+    max-width: 826px;
+
+    &--box {
+      width: 740px;
+      height: 470px;
+
+      &-strip {
+        margin: 24px 12px 24px 24px;
+      }
+
+      &-children {
+        margin: 24px 24px 24px 12px;
+      }
+    }
+
+    &--strip {
+      width: 334px;
+      right: calc(50% + 12px);
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile__max-width),
+  only screen and (max-height: $mobile__max-height) {
+  .layout {
+    max-width: 640px;
+    min-width: 360px;
+    min-height: calc(400px + 20px * 2);
+
+    &--box {
+      width: calc(100% - 20px * 2);
+      height: 400px;
+
+      &-strip {
+        display: none;
+      }
+
+      &-children {
+        width: 100%;
+        margin: 20px;
+      }
+    }
+
+    &--strip {
+      width: 80%;
+      right: unset;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

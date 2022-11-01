@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+<div>
+  <a
+    class="link className"
+    href="/auth/sign-up"
+  >
+    Sign up
+  </a>
+</div>
+`;

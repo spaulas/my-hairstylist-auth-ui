@@ -1,0 +1,20 @@
+$big-desktop__min-width: 1440px;
+
+$tablet-landscape__max-width: $big-desktop__min-width;
+$tablet-landscape__min-width: 1280px;
+$tablet-landscape__min-height: 800px;
+
+$medium-desktop__max-width: $tablet-landscape__min-width;
+$medium-desktop__min: 1024px;
+$medium-desktop__max-height: $tablet-landscape__min-height;
+$medium-desktop__min-height: 652px;
+
+$tablet-portrait__max-width: $medium-desktop__min;
+$tablet-portrait__min-width: 826px;
+$tablet-portrait__max-height: $medium-desktop__min-height;
+$tablet-portrait__min-height: 570px;
+
+$mobile__max-width: $tablet-portrait__min-width;
+$mobile__min-width: 360px;
+$mobile__max-height: $tablet-portrait__min-height;
+$mobile__min-height: 464px;

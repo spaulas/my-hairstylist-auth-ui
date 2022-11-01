@@ -1,0 +1,100 @@
+@import "@styles/imports";
+
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &--title {
+    margin: 0;
+    padding: 104px 0 64px 0;
+    text-align: center;
+    color: $text--gray__dark;
+
+    &__focused {
+      color: $primary--blue;
+    }
+  }
+
+  &--links {
+    &-forgot-password {
+      margin-top: 16px;
+      display: inline-block;
+    }
+
+    &-sign-up {
+      @include link;
+      margin: auto 0 0 0;
+      text-align: center;
+    }
+  }
+
+  button {
+    margin-top: 16px;
+  }
+}
+
+/* @media only screen and (max-width: $tablet-landscape__max-width) {
+  .form {
+    &--title {
+      padding: 82px 0 50px 0;
+    }
+  }
+}
+ */
+@media only screen and (max-width: $medium-desktop__max-width),
+  only screen and (max-height: $medium-desktop__max-height) {
+  .form {
+    &--title {
+      padding: 86px 0 52px 0;
+    }
+
+    &--links {
+      &-forgot-password {
+        margin-top: 12px;
+      }
+    }
+
+    button {
+      margin-top: 8px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: $tablet-portrait__max-width),
+  only screen and (max-height: $tablet-portrait__max-height) {
+  .form {
+    &--title {
+      padding: 72px 0 48px 0;
+    }
+
+    &--links {
+      &-forgot-password {
+        margin-top: 8px;
+      }
+    }
+
+    button {
+      margin-top: 8px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile__max-width)  and (max-height: $mobile__max-height){
+  .form {
+    &--title {
+      padding: 62px 0 38px 0;
+    }
+
+    &--links {
+      &-forgot-password {
+        margin-top: 8px;
+      }
+    }
+
+    button {
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp renders correctly 1`] = `
+<div>
+  <div
+    class="form"
+  >
+    <h1
+      class="form--title "
+    >
+      My Hairstylist
+    </h1>
+    <div
+      class="form--item"
+    >
+      <p
+        class="form--label form--label__focused"
+      >
+        Name
+      </p>
+      <input
+        class="form--input form--input__focused"
+        data-testid="name"
+        id="name"
+        name="name"
+        type="name"
+        value=""
+      />
+      <p
+        class="error "
+      />
+    </div>
+    <div
+      class="form--item"
+    >
+      <p
+        class="form--label form--label__focused"
+      >
+        Email
+      </p>
+      <input
+        class="form--input form--input__focused"
+        data-testid="email"
+        id="email"
+        name="email"
+        type="email"
+        value=""
+      />
+      <p
+        class="error error__visible"
+      >
+        Please add a valid email
+      </p>
+    </div>
+    <div
+      class="form--item"
+    >
+      <p
+        class="form--label form--label__focused"
+      >
+        Password
+      </p>
+      <input
+        class="form--input form--input__focused"
+        data-testid="password"
+        id="password"
+        name="password"
+        type="password"
+        value=""
+      />
+      <p
+        class="error error__visible"
+      />
+    </div>
+    <button
+      class="primary"
+    >
+      Sign up
+    </button>
+    <p
+      class="form--links-sign-up"
+    >
+      Already have an account?
+        
+      <a
+        class="link "
+        href="/auth/sign-in"
+      >
+        Sign in
+      </a>
+    </p>
+  </div>
+</div>
+`;

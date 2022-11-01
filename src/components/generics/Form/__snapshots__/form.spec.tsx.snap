@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form renders correctly 1`] = `
+<div>
+  <div
+    class="form"
+  >
+    <h1
+      class="form--title "
+    >
+      My Hairstylist
+    </h1>
+    <div>
+      Children component
+    </div>
+    <button
+      class="primary"
+    >
+      Button title
+    </button>
+    <p
+      class="form--links-sign-up"
+    >
+      link message
+        
+      <a
+        class="link "
+        href="/sign-in"
+      >
+        link title
+      </a>
+    </p>
+  </div>
+</div>
+`;

@@ -21,15 +21,34 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
     ],
   },
   resolve: {
     extensions: [".js", ".jsx", ".tsx", ".ts", ".html", ".scss"],
     alias: {
+      "@actions": resolve("src/redux/actions"),
+      "@api": resolve("src/api"),
       "@app": resolve("src/app"),
       "@config": resolve("src/config"),
+      "@components": resolve("src/components"),
       "@constants": resolve("src/constants"),
+      "@hooks": resolve("src/hooks"),
+      "@mocks": resolve("src/__mocks__"),
       "@pages": resolve("src/pages"),
+      "@reducers": resolve("src/redux/reducers"),
+      "@redux": resolve("src/redux"),
+      "@styles": resolve("src/styles"),
+      "@type": resolve("src/type"),
     },
   },
 };
